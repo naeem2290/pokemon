@@ -1,0 +1,48 @@
+<app-pokemon-nav></app-pokemon-nav>
+<div class="container">
+    <div class="header">Pokemon Details</div>
+    <div class="name-wrapper">
+        <mat-label class="name-label">
+            Name:
+        </mat-label>
+        <span class="name">{{pokemon?.name}}</span>
+    </div>
+    <div class="flex-col box">
+        <mat-label class="titles">
+            Abilities:
+        </mat-label>
+        <div *ngFor="let ability of pokemon?.abilities">
+            <div class="margin">
+                <div><span class="labels">Ability Name:</span> {{ability?.ability?.name}}</div>
+                <div><span class="labels">Ability Url:</span> {{ability?.ability?.url}}</div>
+                <div><span class="labels">Slot:</span> {{ability?.slot}}</div>
+                <div><span class="labels">isHidden:</span> {{ability?.isHidden ? 'True' : 'False'}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-col box">
+        <mat-label class="titles">
+            Stats:
+        </mat-label>
+        <div *ngFor="let stat of pokemon?.stats">
+            <div class="margin">
+                <div><span class="labels">Stat Name:</span> {{stat?.stat?.name}}</div>
+                <div><span class="labels">Stat Url:</span> {{stat?.stat?.url}}</div>
+                <div><span class="labels">base_stat:</span> {{stat?.base_stat}}</div>
+                <div><span class="labels">effort:</span> {{stat?.effort}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-col box">
+        <mat-label class="titles">
+            Types:
+        </mat-label>
+        <div *ngFor="let type of pokemon?.types">
+            <div class="margin">
+                <div><span class="labels">Type Name:</span> {{type?.type?.name}}</div>
+                <div><span class="labels">Type Url:</span> {{type?.type?.url}}</div>
+                <div><span class="labels">Slot:</span> {{type?.slot}}</div>
+            </div>
+        </div>
+    </div>
+</div>

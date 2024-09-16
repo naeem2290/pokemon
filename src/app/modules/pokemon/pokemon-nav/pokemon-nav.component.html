@@ -1,0 +1,24 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="over">
+        <img src="/assets/logo.png">
+        <hr />
+        <nav>
+            <a routerLink="/home" routerLinkActive="active">Home</a>
+        </nav>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <header>
+                <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+                <img src="/assets/logo.png">
+                <nav>
+                    <a routerLink="/home" routerLinkActive="active">Home</a>
+                </nav>
+            </header>
+        </mat-toolbar>
+        <section>
+            <router-outlet></router-outlet>
+        </section>
+    </mat-sidenav-content>
+</mat-sidenav-container>
